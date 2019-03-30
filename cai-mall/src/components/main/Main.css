@@ -1,0 +1,10 @@
+.App-main {
+  background: #fff;
+  position: absolute;
+  top: 5.5em;
+  bottom: 3em;
+  left: 0;
+  right: 0;
+  color: gray;
+  box-sizing: border-box;
+  margin-top: 10px; }

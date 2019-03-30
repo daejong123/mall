@@ -1,0 +1,13 @@
+.p-item {
+    box-shadow: 0 0 1em 0 gray;
+    margin-top: 1em;
+    background: #fff;
+    padding: .5em;
+    border-radius: .5em;
+
+    &:hover {
+        cursor: pointer;
+        background: #f3ac97;
+        color: #fff;
+    }
+}

@@ -1,0 +1,31 @@
+.Main-aside {
+  position: absolute;
+  top: 0;
+  left: 1em;
+  bottom: 0;
+  width: 15em;
+  box-shadow: 0 0 10px 0 gray;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #8ed6ff;
+  overflow-y: auto; }
+  .Main-aside .goods-kind-hover, .Main-aside .goods-kind:hover, .Main-aside .kind-current {
+    cursor: pointer;
+    color: #f3ac97;
+    transform: translateX(10px); }
+  .Main-aside .goods-kind {
+    margin-bottom: 10px;
+    font-size: 18px;
+    box-shadow: 0 0 10px 0 grey;
+    padding: 10px 20px;
+    border-radius: 10px;
+    user-select: none;
+    background-color: #fff;
+    color: #666;
+    transition: all 0.1s ease-in-out; }
+    .Main-aside .goods-kind .goods-name {
+      display: inline-block;
+      margin-left: 5px; }
+  .Main-aside .kind-current {
+    color: #f3ac97; }

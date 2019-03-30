@@ -1,0 +1,99 @@
+@import '../../_app.scss';
+
+.App-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #8ed6ff;
+    color: white;
+    height: 5em;
+    padding: .5em 2em;
+    margin: .5em 1em;
+    border-radius: .5em;
+    box-sizing: border-box;
+    user-select: none;
+
+    .App-logo {
+        display: flex;
+        align-items: center;
+
+        .App-logo-img {
+            cursor: pointer;
+            transition: 0.2s all ease-in;
+
+            &:hover {
+                transform: scale(1.2)
+            }
+        }
+    }
+
+    .App-title {
+        margin-left: 0.5em;
+        font-size: 1.5em;
+        color: $header-title-color;
+    }
+
+    .App-person {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: gray;
+
+        .App-login {
+            display: inline-block;
+            margin-right: 10px;
+
+            &:hover {
+                color: #33a1d0;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+        .login-btn {
+            color: gray;
+        }
+
+        .App-register {
+            color: $header-font-color;
+
+            &:hover {
+                color: #33a1d0;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+        .App-private {
+            @extend .App-register;
+            color: gray;
+            position: relative;
+            user-select: none;
+
+            &:hover .App-private-content {
+                display: block;
+            }
+
+            .App-private-content {
+                display: none;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.6);
+                z-index: 10;
+                border-radius: 0.5em;
+                min-width: 8em;
+                padding: .5em 1em;
+
+                .private-content-item {
+                    color: #33a1d0;
+                    padding: 0.5em 1em;
+                    border-radius: 0.5em;
+
+                    &:hover {
+                        background: #33a1d0;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+}

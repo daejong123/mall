@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>南财二手商城后台</h2>
+            <div class="userinfo">
+                你好，
+                <span id="username" class="username">
+                    <%= username %>
+                </span>
+                <div class="logout">退出登录</div>
+            </div>
+        </div>
+        <div class="generate-code">
+            <div class="code-btn-content"></div>
+            <div class="code-btn">产生一个卖家注册码</div>
+        </div>
+        <div class="all-users">
+        </div>
+    </div>
+</body>
+
+<script src='./index.js'></script>
+
+</html>

@@ -1,0 +1,44 @@
+.register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 1em 0 grey;
+  padding: 1em 3em;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 1em;
+  max-width: 30%;
+  min-width: 25em; }
+  .register .register-title {
+    border-bottom: 1px solid #52962b;
+    color: #52962b;
+    font-size: 1.8em;
+    user-select: none; }
+  .register .hover-tab-item, .register .identity-tab-item-current, .register .register-container .identity-tab .identity-tab-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #52962b;
+    user-select: none; }
+  .register .register-container {
+    margin-top: 1em; }
+    .register .register-container .identity-tab {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .register .register-container .identity-tab .identity-tab-item {
+        font-weight: bold;
+        padding: .5em 1em;
+        flex: 1;
+        border-radius: .5em;
+        transition: all 0.1s ease-in-out;
+        text-align: center; }
+        .register .register-container .identity-tab .identity-tab-item:nth-child(1) {
+          margin-right: .1em; }
+        .register .register-container .identity-tab .identity-tab-item:hover {
+          cursor: pointer; }
+    .register .register-container .register-inputs .register-input {
+      margin-top: 1em; }
+    .register .register-container .register-inputs .register-btn {
+      margin-top: 1em;
+      display: flex;
+      justify-content: space-around; }

@@ -1,0 +1,64 @@
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #8ed6ff;
+  color: white;
+  height: 5em;
+  padding: .5em 2em;
+  margin: .5em 1em;
+  border-radius: .5em;
+  box-sizing: border-box;
+  user-select: none; }
+  .App-header .App-logo {
+    display: flex;
+    align-items: center; }
+    .App-header .App-logo .App-logo-img {
+      cursor: pointer;
+      transition: 0.2s all ease-in; }
+      .App-header .App-logo .App-logo-img:hover {
+        transform: scale(1.2); }
+  .App-header .App-title {
+    margin-left: 0.5em;
+    font-size: 1.5em;
+    color: #f3ac99; }
+  .App-header .App-person {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: gray; }
+    .App-header .App-person .App-login {
+      display: inline-block;
+      margin-right: 10px; }
+      .App-header .App-person .App-login:hover {
+        color: #33a1d0;
+        cursor: pointer;
+        text-decoration: underline; }
+    .App-header .App-person .login-btn {
+      color: gray; }
+    .App-header .App-person .App-register, .App-header .App-person .App-private {
+      color: #f3ac97; }
+      .App-header .App-person .App-register:hover, .App-header .App-person .App-private:hover {
+        color: #33a1d0;
+        cursor: pointer;
+        text-decoration: underline; }
+    .App-header .App-person .App-private {
+      color: gray;
+      position: relative;
+      user-select: none; }
+      .App-header .App-person .App-private:hover .App-private-content {
+        display: block; }
+      .App-header .App-person .App-private .App-private-content {
+        display: none;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 10;
+        border-radius: 0.5em;
+        min-width: 8em;
+        padding: .5em 1em; }
+        .App-header .App-person .App-private .App-private-content .private-content-item {
+          color: #33a1d0;
+          padding: 0.5em 1em;
+          border-radius: 0.5em; }
+          .App-header .App-person .App-private .App-private-content .private-content-item:hover {
+            background: #33a1d0;
+            color: #fff; }

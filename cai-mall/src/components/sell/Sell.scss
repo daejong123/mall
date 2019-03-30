@@ -1,0 +1,35 @@
+.sell {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .sell-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        flex: 1;
+
+        .sell-container-item {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px 0 grey;
+            padding: 10px;
+        }
+
+        .sell-aside {
+            width: 15em;
+            @extend .sell-container-item;
+            background: #8ed6ff;
+            overflow-y: auto;
+        }
+
+        .sell-content {
+            flex: 1;
+            @extend .sell-container-item;
+            background: #fff;
+            margin-left: 10px;
+            overflow-y: auto;
+        }
+    }
+}

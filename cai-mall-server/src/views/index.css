@@ -1,0 +1,76 @@
+body {
+    background: #f7f5f1;
+}
+
+.container .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .header .userinfo {
+    align-self: flex-end;
+    padding-right: 20px;
+}
+
+.container .header .userinfo .username,
+.logout {
+    color: #33a1d0;
+}
+
+.container .header .userinfo .logout:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
+.container .generate-code {
+    width: 200px;
+    box-shadow: 0 0 10px 0 grey;
+    padding: 20px 50px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.container .generate-code .code-btn-content {
+    color: #7e5ccc;
+    text-align: center;
+}
+
+.container .generate-code .code-btn {
+    font-size: 14px;
+    border: 1px solid #33a1d0;
+    margin-top: 10px;
+    color: #33a1d0;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.container .generate-code .code-btn:hover {
+    background: #33a1d0;
+    color: #fff;
+    border-color: #fff;
+    cursor: pointer;
+}
+
+.cai-mall-user {
+    box-shadow: 0 0 10px 0 grey;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.cai-mall-user:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+.cai-mall-user .user-label {
+    width: 75px;
+    color: rgba(4, 109, 19, 0.788);
+    display: inline-block;
+}

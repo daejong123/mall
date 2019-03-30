@@ -1,0 +1,41 @@
+{
+    "name": "cai-mall",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@tinymce/tinymce-react": "^3.0.1",
+        "antd": "^3.15.1",
+        "axios": "^0.18.0",
+        "js-cookie": "^2.2.0",
+        "node-sass-chokidar": "^1.3.4",
+        "querystring": "^0.2.0",
+        "react": "^16.8.4",
+        "react-dom": "^16.8.4",
+        "react-redux": "^6.0.1",
+        "react-router-dom": "^4.3.1",
+        "react-scripts-ts": "3.1.0",
+        "react-tinymce": "^0.7.0",
+        "redux": "^4.0.1"
+    },
+    "scripts": {
+        "build-css": "node-sass-chokidar src/ -o src/",
+        "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+        "start:dev": "react-scripts-ts start",
+        "start": "run-p watch-css start:dev",
+        "build": "react-scripts-ts build",
+        "test": "react-scripts-ts test --env=jsdom",
+        "eject": "react-scripts-ts eject"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.9",
+        "@types/node": "^11.10.5",
+        "@types/react": "^16.8.7",
+        "@types/react-dom": "^16.8.2",
+        "@types/react-redux": "^7.0.3",
+        "@types/react-router-dom": "^4.3.1",
+        "node-sass": "^4.11.0",
+        "npm-run-all": "^4.1.5",
+        "sass-loader": "^7.1.0",
+        "typescript": "^3.3.3333"
+    }
+}
