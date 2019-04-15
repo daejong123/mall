@@ -2,7 +2,6 @@ import * as React from 'react';
 import './Content.css';
 import ProductItem from '../product-item/ProductItem';
 
-
 export interface IProductItemData {
     id: number;
     name: string;
@@ -30,21 +29,23 @@ class Content extends React.Component<IProps> {
     public render() {
         const { goodsData } = this.props;
         return (
-            <div className="Main-content">
-                {
-                    goodsData.map((item: IProductItemData, index: number) => (
-                        <ProductItem
-                            key={index}
-                            pImgUrl={this.getFirstImg(item.details)}
-                            id={item.id}
-                            pName={item.name}
-                            pOldPrice={item.old_price}
-                            pNewPrice={item.price}
-                            pIntroduce={item.introduce}
-                            itemClick={this.props.productItemClick}
-                            clickAddToCart={this.props.clickAddToCart} />
-                    ))
-                }
+            <div className="Main-container">
+                <div className='Main-content'>
+                    {
+                        goodsData.map((item: IProductItemData, index: number) => (
+                            <ProductItem
+                                key={index}
+                                pImgUrl={this.getFirstImg(item.details)}
+                                id={item.id}
+                                pName={item.name}
+                                pOldPrice={item.old_price}
+                                pNewPrice={item.price}
+                                pIntroduce={item.introduce}
+                                itemClick={this.props.productItemClick}
+                                clickAddToCart={this.props.clickAddToCart} />
+                        ))
+                    }
+                </div>
             </div>
         )
     }

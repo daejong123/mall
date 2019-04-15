@@ -1,6 +1,6 @@
-.Main-content {
+.Main-container {
   position: absolute;
-  top: 0;
+  top: 1em;
   bottom: 0;
   left: 18em;
   right: 1em;
@@ -8,6 +8,7 @@
   border-radius: 5px;
   overflow-y: auto;
   padding: 5px 10px;
-  background-color: #8ed6ff;
-  display: flex;
-  flex-wrap: wrap; }
+  background-color: #8ed6ff; }
+  .Main-container .Main-content {
+    display: flex;
+    flex-wrap: wrap; }

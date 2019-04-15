@@ -1,6 +1,8 @@
 import * as React from 'react';
 import './Aside.css';
-import { Icon } from 'antd';
+import { Icon, Input } from 'antd';
+
+const Search = Input.Search;
 
 interface IGoodsKind {
     name: string;
@@ -9,6 +11,7 @@ interface IGoodsKind {
 interface IProps {
     goodsKinds: IGoodsKind[];
     doSelectKind: (kindId: number) => void;
+    doSearchContent: (search: string) => void;
 }
 
 interface IState {
@@ -33,6 +36,15 @@ class Aside extends React.Component<IProps, IState> {
         const { currentSelect } = this.state;
         return (
             <div className="Main-aside">
+                <div className="Main-search">
+                    <Search
+                        className="app-search"
+                        placeholder="输入商品名称"
+                        onSearch={value => this.props.doSearchContent(value)}
+                        enterButton={true}
+                    />
+                </div>
+                <div>
                 {
                     goodsKinds.map((item: IGoodsKind, index: number) => {
                         return (
@@ -48,6 +60,7 @@ class Aside extends React.Component<IProps, IState> {
                             </div>);
                     })
                 }
+                </div>
             </div>
         )
     }

@@ -38,8 +38,8 @@ class Main extends React.Component<IProps, IState> {
         const { goodsKinds, currentKindGoodsData, currentGoodsDetail } = this.state;
         return (
             <div className="App-main">
-                <Aside goodsKinds={goodsKinds} doSelectKind={this.doSelectKind} />
-                <Content goodsData={currentKindGoodsData} productItemClick={this.productItemClick} clickAddToCart={this.clickAddToCart} />
+                <Aside goodsKinds={goodsKinds} doSelectKind={this.doSelectKind} doSearchContent={this.doSearchContent}/>
+                <Content goodsData={currentKindGoodsData} productItemClick={this.productItemClick} clickAddToCart={this.clickAddToCart}/>
                 <div>
                     <Drawer
                         width={640}
@@ -72,6 +72,24 @@ class Main extends React.Component<IProps, IState> {
             visible: false,
         });
     };
+
+    private doSearchContent = (search: string) => {
+        if (search.trim() === "") {
+            const r1 = this.state.goodsData.filter(item => item.kind_id === 1);
+            this.setState({
+                currentKindGoodsData: r1
+            });
+            return;
+        }
+        const r = this.state.goodsData.filter(item => item.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || item.introduce.toLowerCase().indexOf(search.toLowerCase()) !== -1);
+        if (!r.length) {
+            message.warning('未搜索到结果');
+            return;
+        }
+        this.setState({
+            currentKindGoodsData: r
+        });
+    }
 
     private doSelectKind = (kindId: number) => {
         const r = this.state.goodsData.filter(item => item.kind_id === kindId);

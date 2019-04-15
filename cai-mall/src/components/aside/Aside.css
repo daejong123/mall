@@ -10,6 +10,8 @@
   padding: 20px;
   background-color: #8ed6ff;
   overflow-y: auto; }
+  .Main-aside .Main-search {
+    margin-bottom: 1em; }
   .Main-aside .goods-kind-hover, .Main-aside .goods-kind:hover, .Main-aside .kind-current {
     cursor: pointer;
     color: #f3ac97;
