@@ -24,7 +24,8 @@
         "start": "run-p watch-css start:dev",
         "build": "react-scripts-ts build",
         "test": "react-scripts-ts test --env=jsdom",
-        "eject": "react-scripts-ts eject"
+        "eject": "react-scripts-ts eject",
+        "web-dev": "live-server ./build --port=3003"
     },
     "devDependencies": {
         "@types/jest": "^24.0.9",
@@ -33,6 +34,7 @@
         "@types/react-dom": "^16.8.2",
         "@types/react-redux": "^7.0.3",
         "@types/react-router-dom": "^4.3.1",
+        "live-server": "^1.2.1",
         "node-sass": "^4.11.0",
         "npm-run-all": "^4.1.5",
         "sass-loader": "^7.1.0",
